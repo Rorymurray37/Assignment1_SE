@@ -13,10 +13,10 @@ import java.util.ArrayList;
 public class Student{
     private String name,DOB;
     private int age,ID;
-    private ArrayList<Module> modules = new ArrayList<Module>();
+    private ArrayList<Module> modules = new ArrayList<Module>();//Array list for Module Objects
+    private Program course;
     
-    
-    public Student(String name,String DOB,int age,int ID){
+    public Student(String name,String DOB,int age,int ID){ // Initialise variables
      this.name = name;
      this.DOB = DOB;
      this.age = age;
@@ -24,7 +24,7 @@ public class Student{
      
     }
     
-    public String getUsername(){
+    public String getUsername(){ //Get methods
         return name + age;  
     }
     public String getName(){
@@ -40,11 +40,30 @@ public class Student{
         return DOB;
       
     }
+    public String getCourse(){
+        return course.getName();
+    }
     
-    public void Register(Module module)
+    public void RegisterForModule(Module module) //Register student for module
     {
         modules.add(module);
         module.AddStudent(this);
     }    
+    public void RegisterForCourse(Program p){ //Register student for Course
+        this.course = p;
+        course.AddStudent(this);
+    }
+    
+    public void Print(){//Print method for Student details
+       
+       String out = name +"| "+ this.getUsername() + "| " + course.getName();
+        System.out.print(out + "\n");
+        System.out.print("Modules"+ "\n" + "----------"+"\n");
+        
+        for (Module num : modules){
+            System.out.print(num.getName()+"\n");
+      }
+           System.out.print("\n" + "\n");    
+    }
     
 }

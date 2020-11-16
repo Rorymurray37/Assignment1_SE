@@ -11,9 +11,9 @@ import java.util.ArrayList;
  */
 public class Module {
     private String name;
-    private ArrayList<Student> students = new ArrayList<Student>();
+    private ArrayList<Student> students = new ArrayList<Student>();//Array list for Student Objects
     
-    public Module(String name){
+    public Module(String name){ //initialise variables
         this.name= name;
     }
     
@@ -26,7 +26,7 @@ public class Module {
         
     }
     
-    public void print(){
+    public void print(){ // print method to list students in module
         System.out.print(name + "\n");
         System.out.print("----------------" + "\n");
         for(int i = 0; i< students.size(); i++){
