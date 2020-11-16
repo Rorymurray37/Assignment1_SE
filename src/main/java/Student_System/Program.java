@@ -50,7 +50,8 @@ public class Program {
    public void PrintModules(){
         for(int i = 0; i< modules.size(); i++){
             Module m = modules.get(i);
-            System.out.print(m.getName());
+            
+            
             m.print();
         }
        
