@@ -25,7 +25,7 @@ public class Student{
     }
     
     public String getUsername(){
-        return name + DOB;  
+        return name + age;  
     }
     public String getName(){
         return name;     

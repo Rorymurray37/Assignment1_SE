@@ -27,9 +27,11 @@ public class Module {
     }
     
     public void print(){
+        System.out.print(name + "\n");
+        System.out.print("----------------" + "\n");
         for(int i = 0; i< students.size(); i++){
             Student stu = students.get(i);
-            System.out.print(stu.getName());
+            System.out.print(stu.getName() + "\n");
            }
     }
 }
