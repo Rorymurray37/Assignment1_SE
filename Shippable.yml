@@ -1,0 +1,15 @@
+language: java 
+
+jdk:
+   - openjdk11 
+
+
+after_success: 
+  - mvn clean cobertura:cobertura 
+  - mvn test 
+
+
+notifications: 
+   email: 
+      recipients: 
+         - r.murray15@nuigalway.ie
